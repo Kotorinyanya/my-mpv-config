@@ -182,11 +182,13 @@ p = evil_magic
 
 function get(property_name, default)
     local val = p[property_name]
+    msg.warn(val)
     if val == nil then
         val = default
     end
     return val
 end
+
 
 -- re-evaluate all profiles immediately
 on_idle()
